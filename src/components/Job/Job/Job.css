@@ -1,0 +1,21 @@
+@import '../../shared/definitions.css';
+
+.job-body-container {
+    padding: 26px;
+}
+.job-container .greyed-out-item {
+    color: var(--APP_GREY_COLOR);
+}
+
+.job-body-container .count-container {
+    font-weight: 600;
+}
+
+.job-body-container >:not(:last-child) { 
+    margin-bottom: 16px;
+}
+
+.job-body-loading-container {
+    color: var(--PRIMARY_COLOR);
+    font-weight: 600;
+}

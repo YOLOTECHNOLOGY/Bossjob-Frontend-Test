@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { IconContext } from 'react-icons';
 
-import './ImageDescriptor.less';
+import './ImageDescriptor.css';
 
 export const ImageDescriptor = ({className, icon, text, src, altText, size}) => {
 	let iconEl;

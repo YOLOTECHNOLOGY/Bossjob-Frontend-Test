@@ -1,0 +1,45 @@
+@import '../../shared/definitions.css';
+
+.search-container {
+    background-color: var(--HEADER_BACKGROUND_COLOR);
+    margin-bottom: 16px;
+    padding: 16px;
+}
+
+.search-container .search-input-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 0 26px 0;
+}
+
+
+.search-container .filter-button {
+    border: 2px solid var(--PRIMARY_COLOR);
+    border-radius: 16px;
+    background-color: white;
+    color: var(--PRIMARY_COLOR);
+    width: 100%;
+    margin: 16px 0;
+    padding: 8px 0;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.search-container .search-input-container >:not(:last-child) { 
+    margin-right: 8px;
+}
+
+input.search-text-box {
+    border: none;
+    width: 100%;
+    color: var(--SEARCH_TEXT_COLOR);
+    font-weight: 600;
+    background-color: var(--HEADER_BACKGROUND_COLOR);
+}
+
+
+input.search-text-box:focus-visible {
+    outline: none;
+}

@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, {useState, useEffect} from 'react';
 import { SectionDivider } from '../../shared/uikit/SectionDivider';
 
-import './Job.less';
+import './Job.css';
 import { JobList } from './JobList/JobList';
 import { Pagination } from '../../shared/uikit/Pagination/Pagination';
 import {Header} from '../../shared/uikit/Header';

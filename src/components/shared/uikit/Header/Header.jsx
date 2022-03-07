@@ -3,7 +3,7 @@ import React from 'react';
 
 import Logo from '../../../../assets/images/Logo.svg';
 import { SectionDivider } from '../SectionDivider';
-import './Header.less';
+import './Header.css';
 
 export const Header = ({className}) => (
 	<>

@@ -6,7 +6,7 @@ import { JobBody } from './JobBody';
 import { SectionDivider } from '../../../shared/uikit/SectionDivider';
 import {convertSalariesToCurrency, getUpdatedInfo} from '../../../../utils/JobUtils';
 
-import './JobList.less';
+import './JobList.css';
 
 export const JobList = ({page}) => {
 	if (!page || !page.jobs) {

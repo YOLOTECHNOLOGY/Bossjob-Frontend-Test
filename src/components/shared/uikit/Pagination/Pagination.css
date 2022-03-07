@@ -1,0 +1,29 @@
+@import "../../definitions.css";
+
+.pagination-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+
+.pagination-container .pagination-page-num {
+  cursor: pointer;
+}
+
+.pagination-page-num.active {
+  color: var(--PRIMARY_COLOR);
+}
+
+.pagination-section {
+  cursor: pointer;
+  color: var(--PRIMARY_COLOR);
+}
+
+.pagination-section.pagination-section-disabled {
+  cursor: auto;
+  color: black;
+}
+
+.pagination-ellipsis {
+  cursor: auto;
+}

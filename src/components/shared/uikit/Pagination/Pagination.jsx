@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {range} from 'lodash';
 import {store} from '../../../../redux/store';
 
-import './Pagination.less';
+import './Pagination.css';
 
 export const Pagination = () => {
 	let extended = false;

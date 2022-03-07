@@ -5,7 +5,7 @@ import { ImageDescriptor } from '../../ImageDescriptor';
 import { FaSuitcase } from 'react-icons/fa';
 import {GiGraduateCap} from 'react-icons/gi';
 import {IoTimeOutline} from 'react-icons/io5';
-import './JobMetadata.less';
+import './JobMetadata.css';
 import { MenuDivider } from '../../../shared/uikit/MenuDivider';
 
 export const JobMetadata = ({location, experienceLevel, degree, type}) => (

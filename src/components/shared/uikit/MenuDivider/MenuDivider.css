@@ -1,0 +1,22 @@
+.menu-divider-container {
+    display: flex;
+
+    align-items: center;
+}
+
+.menu-divider-container .right-divider {
+    white-space: nowrap;
+}
+
+.menu-divider-container .left-divider {
+    margin-right: 8px;
+}
+
+
+.menu-divider-container.separate {
+    justify-content: space-between;
+}
+
+.menu-divider-container.immediate {
+    justify-content: flex-start;
+}

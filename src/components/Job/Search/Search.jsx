@@ -3,7 +3,7 @@ import React from 'react';
 import SearchIcon from '../../../assets/images/search.svg';
 import { SectionDivider } from '../../shared/uikit/SectionDivider';
 
-import './Search.less';
+import './Search.css';
 
 export const Search = ({className, onValueFilter}) => {
 	const textFieldRef = React.createRef();

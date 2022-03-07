@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.less';
+import './App.css';
 import {Job} from './components/Job';
 
 function App() {

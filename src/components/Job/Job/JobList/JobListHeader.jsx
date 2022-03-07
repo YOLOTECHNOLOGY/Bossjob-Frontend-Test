@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { MenuDivider } from '../../../shared/uikit/MenuDivider';
 
-import './JobListHeader.less';
+import './JobListHeader.css';
 
 export const JobListHeader = ({jobTitle, jobPay}) => (
 	<MenuDivider>

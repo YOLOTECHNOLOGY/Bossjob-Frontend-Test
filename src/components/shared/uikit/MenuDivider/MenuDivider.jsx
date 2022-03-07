@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 
-import './MenuDivider.less';
+import './MenuDivider.css';
 
 export const MenuDivider = (props) => (
 	<div className={`menu-divider-container ${props.separatedType}`}>{props.children}</div>

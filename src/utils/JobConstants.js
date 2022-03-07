@@ -3,4 +3,8 @@ export const SERVER_URL = `https://search.bossjob.com/api/v1/search/job_filter?s
 export const CURRENCY_SYMBOLS = {
 	'Philippines': '₱', // Philippine Peso
 	'United States': '$', // US Dollar
+	'Singapore': 'S$',
+	'Europe': '€', // Euro
+	'India': '₹', // Indian Rupee
+	'Japan': '¥', // Japanese Yen
 };
