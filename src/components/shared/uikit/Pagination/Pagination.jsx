@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React, {useState, useEffect} from 'react';
 import {range} from 'lodash';
 import {store} from '../../../../redux/store';

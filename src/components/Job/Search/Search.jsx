@@ -1,7 +1,5 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { fetchFilteredJobs } from '../../../apis/JobApi';
-
 import SearchIcon from '../../../assets/images/search.svg';
 import { SectionDivider } from '../../shared/uikit/SectionDivider';
 

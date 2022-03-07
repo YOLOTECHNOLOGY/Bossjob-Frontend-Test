@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import { ImageDescriptor } from '../../ImageDescriptor';
-import OptumLogo from '../../../../assets/images/OptumLogo.png';
 import { MenuDivider } from '../../../shared/uikit/MenuDivider';
 
 
