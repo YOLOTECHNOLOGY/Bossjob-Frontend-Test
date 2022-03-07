@@ -1,0 +1,29 @@
+@import "../../definitions.less";
+
+.pagination-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0;
+
+  .pagination-page-num {
+    cursor: pointer;
+
+    &.active {
+      color: @PRIMARY_COLOR;
+    }
+  }
+
+  .pagination-section {
+    cursor: pointer;
+    color: @PRIMARY_COLOR;
+
+    &.pagination-section-disabled {
+      cursor: auto;
+      color: black;
+    }
+  }
+
+  .pagination-ellipsis {
+    cursor: auto;
+  }
+}
