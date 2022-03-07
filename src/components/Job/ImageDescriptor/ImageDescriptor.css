@@ -1,0 +1,21 @@
+.image-container {
+    display: flex;
+    justify-content: flex-start;
+    padding-right: 26px;
+    align-items: center;
+}
+
+.image-container .icon--small {
+    max-width: 20px;
+    margin-right: 8px;
+}
+
+.image-container .icon--medium {
+    max-width: 40px;
+    margin-right: 8px;
+}
+
+.image-container .icon-with-context {
+    margin-right: 8px;
+}
+

@@ -1,0 +1,1 @@
+export {ImageDescriptor} from './ImageDescriptor';
