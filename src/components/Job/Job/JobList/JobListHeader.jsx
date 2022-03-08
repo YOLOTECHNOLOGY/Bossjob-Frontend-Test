@@ -4,12 +4,12 @@ import { MenuDivider } from '../../../shared/uikit/MenuDivider';
 
 import './JobListHeader.css';
 
-export const JobListHeader = ({jobTitle, jobPay}) => (
-	<MenuDivider>
-		<MenuDivider.MenuLeftDivider className='job-header'>
+export const JobListHeader = ({jobTitle, jobPay, className}) => (
+	<MenuDivider className={`job-header ${className}`}>
+		<MenuDivider.MenuLeftDivider className='job-header-left-divider'>
 			{jobTitle}
 		</MenuDivider.MenuLeftDivider>
-		<MenuDivider.MenuRightDivider className='job-header'>
+		<MenuDivider.MenuRightDivider className='job-header-right-divider'>
 			{jobPay}
 		</MenuDivider.MenuRightDivider>
 	</MenuDivider>
@@ -18,4 +18,8 @@ export const JobListHeader = ({jobTitle, jobPay}) => (
 JobListHeader.propTypes = {
 	jobTitle: PropTypes.string.isRequired,
 	jobPay: PropTypes.string.isRequired,
+	className: PropTypes.string,
+};
+JobListHeader.defaultProps = {
+	className: ''
 };

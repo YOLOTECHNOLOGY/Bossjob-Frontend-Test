@@ -8,21 +8,21 @@ import {IoTimeOutline} from 'react-icons/io5';
 import './JobMetadata.css';
 import { MenuDivider } from '../../../shared/uikit/MenuDivider';
 
-export const JobMetadata = ({location, experienceLevel, degree, type}) => (
+export const JobMetadata = ({location, experienceLevel, degree, type, className}) => (
 	<>
-		<MenuDivider separatedType='immediate'>
-			<MenuDivider.MenuLeftDivider>
+		<MenuDivider separatedType='immediate' className={`job-metadata-container-1 ${className}`}>
+			<MenuDivider.MenuLeftDivider className='job-metadata-left-divider-1'>
 				<ImageDescriptor src={Location} text={location} altText='location' size='small'></ImageDescriptor>
 			</MenuDivider.MenuLeftDivider>
-			<MenuDivider.MenuRightDivider>
+			<MenuDivider.MenuRightDivider className='job-metadata-right-divider-1'>
 				<ImageDescriptor icon={<FaSuitcase/>} text={experienceLevel}></ImageDescriptor>
 			</MenuDivider.MenuRightDivider>
 		</MenuDivider>
-		<MenuDivider separatedType='immediate'>
-			<MenuDivider.MenuLeftDivider>
+		<MenuDivider separatedType='immediate' className={`job-metadata-container-2 ${className}`}>
+			<MenuDivider.MenuLeftDivider className='job-metadata-left-divider-2'>
 				<ImageDescriptor icon={<GiGraduateCap/>} text={degree}></ImageDescriptor>
 			</MenuDivider.MenuLeftDivider>
-			<MenuDivider.MenuRightDivider>
+			<MenuDivider.MenuRightDivider className='job-metadata-right-divider-2'>
 				<ImageDescriptor icon={<IoTimeOutline/>} text={type}></ImageDescriptor>
 			</MenuDivider.MenuRightDivider>
 		</MenuDivider>
@@ -34,4 +34,8 @@ JobMetadata.propTypes = {
 	experienceLevel: PropTypes.string.isRequired,
 	degree: PropTypes.string.isRequired, 
 	type: PropTypes.string.isRequired, 
+	className: PropTypes.string,
+};
+JobMetadata.defaultProps = {
+	className: ''
 };

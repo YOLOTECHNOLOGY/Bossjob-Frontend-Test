@@ -35,7 +35,7 @@ export const Job = () => {
 
 	return (
 		<div className='job-container'>
-			<Header classNme='Header-Wrapper' />
+			<Header className='Header-Wrapper' />
 			<Search onValueFilter={onValueFilter} className='Search-Wrapper' />
 			{loading ? (
 				<div className='job-body-loading-container'> Page is loading... Please wait </div>

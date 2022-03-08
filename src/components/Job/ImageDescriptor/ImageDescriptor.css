@@ -15,6 +15,11 @@
     margin-right: 8px;
 }
 
+.image-container .icon--large {
+    max-width: 60px;
+    margin-right: 8px;
+}
+
 .image-container .icon-with-context {
     margin-right: 8px;
 }

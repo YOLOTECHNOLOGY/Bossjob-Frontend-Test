@@ -38,10 +38,11 @@ export const convertSalariesToCurrency = (countryName, salaryFrom, salaryTo) => 
 
 export const getUpdatedInfo = (stringDate1) => {
 	const lookup = [
-		{ value: 1, symbol: 'second' },
-		{ value: 60, symbol: 'minute' },
-		{ value: 3600, symbol: 'hour' },
-		{ value: 86400, symbol: 'day' },
+		{ value: 0, text: 'Just now' , skipValidation: true},
+		{ value: 1, text: 'second' },
+		{ value: 60, text: 'minute' },
+		{ value: 3600, text: 'hour' },
+		{ value: 86400, text: 'day' },
 	];
 
 	const date1 = new Date(stringDate1);
@@ -51,10 +52,13 @@ export const getUpdatedInfo = (stringDate1) => {
 	var item = lookup.slice().reverse().find(function(item) {
 		return diffSeconds >= item.value;
 	});
-	const value = Math.floor(diffSeconds/item.value);
-	let symbol = item.symbol;
-	if (value > 1) {
-		symbol += 's';
+	let text = item.text;
+	if (item.skipValidation) {
+		return text;
 	}
-	return `${value} ${symbol} ago`;
+	const value = Math.floor(diffSeconds/item.value);
+	if (value > 1) {
+		text += 's';
+	}
+	return `${value} ${text} ago`;
 };

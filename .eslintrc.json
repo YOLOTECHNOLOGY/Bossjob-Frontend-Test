@@ -1,7 +1,8 @@
 {
     "env": {
         "browser": true,
-        "es2021": true
+        "es2021": true,
+        "jest": true
     },
     "extends": [
         "eslint:recommended",
@@ -15,7 +16,8 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react",
+        "jest"
     ],
     "rules": {
         "indent": [
@@ -34,5 +36,10 @@
             "error",
             "always"
         ]
-    }
+    },
+    "settings": {
+        "react": {
+          "version": "detect"
+        }
+      }
 }

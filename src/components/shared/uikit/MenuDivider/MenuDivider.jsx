@@ -5,7 +5,7 @@ import React from 'react';
 import './MenuDivider.css';
 
 export const MenuDivider = (props) => (
-	<div className={`menu-divider-container ${props.separatedType}`}>{props.children}</div>
+	<div data-testid='menu-divider-container' className={`menu-divider-container ${props.separatedType}`}>{props.children}</div>
 );
 
 MenuDivider.propTypes = {
@@ -18,7 +18,7 @@ MenuDivider.propTypes = {
 		}),
 		PropTypes.node,
 	])),
-	separatedType: PropTypes.oneOf['separate', 'immediate']
+	separatedType: PropTypes.oneOf(['separate', 'immediate'])
 };
 
 MenuDivider.defaultProps = {
@@ -26,11 +26,10 @@ MenuDivider.defaultProps = {
 };
 
 const MenuLeftDivider = (props) => (
-	<div className={`left-divider ${props.className}`}>{props.children}</div>
+	<div data-testid='menu-left-divider' className={`left-divider ${props.className}`}>{props.children}</div>
 );
 
 MenuLeftDivider.propTypes = {
-	children: PropTypes.object.isRequired,
 	className: PropTypes.string,
 };
 
@@ -39,11 +38,10 @@ MenuLeftDivider.defaultProps = {
 };
 
 const MenuRightDivider = (props) => (
-	<div className={`right-divider ${props.className}`}>{props.children}</div>
+	<div data-testid='menu-right-divider' className={`right-divider ${props.className}`}>{props.children}</div>
 );
 
 MenuRightDivider.propTypes = {
-	children: PropTypes.object.isRequired,
 	className: PropTypes.string,
 };
 

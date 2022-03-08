@@ -15,13 +15,16 @@ export const Search = ({className, onValueFilter}) => {
 	return (<div className={`search-container ${className}`}>
 		<div className="search-input-container">
 			<img className='search-icon' src={SearchIcon} alt="Search" />
-			<input ref={textFieldRef} placeholder='Search for job title or company name' className='search-text-box' type="text" name="name" />
+			<input data-testid='search-text-box-input' ref={textFieldRef} placeholder='Search for job title or company name' className='search-text-box' type="text" name="name" />
 		</div>
 		<SectionDivider></SectionDivider>
-		<button onClick={handleFilterResult} className='filter-button'>Filter Results</button>
+		<button data-testid='search-button-on-filter'  onClick={handleFilterResult} className='filter-button'>Filter Results</button>
 	</div>);
 };
 Search.propTypes = {
-	className: PropTypes.string.isRequired,
+	className: PropTypes.string,
 	onValueFilter: PropTypes.func.isRequired,
+};
+Search.defaultProps = {
+	className: '',
 };

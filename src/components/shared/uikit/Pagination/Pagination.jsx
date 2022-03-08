@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React, {useState, useEffect} from 'react';
 import {range} from 'lodash';
 import {store} from '../../../../redux/store';
@@ -40,6 +41,9 @@ export const Pagination = () => {
 	}, [currentPageNo]);
 
 	useEffect(() => {
+		if (firstPageSection.start === ranges[0] && lastPageSection.end === ranges[1]) {
+			return;
+		}
 		setFirstPageSection({start: ranges[0], disabled: handleFirstPageDisabled(ranges[0])});
 		setLastPageSection({end: ranges[1], disabled: handleLastPageDisabled()});
 	}, [ranges]);
@@ -88,21 +92,21 @@ export const Pagination = () => {
 	};
 
 	return (<div className='pagination-container'>
-		<div onClick={handlePreviousSection} className={previousSectionClassName}>{'<'}</div>
+		<div data-testid='previous-pages' onClick={handlePreviousSection} className={previousSectionClassName}>{'<'}</div>
 		{range(firstPageSection.start, lastPageSection.end).map((pageNo) => {
 			let className =  paginationPageClassName;
 			if (pageNo === currentPageNo) {
 				className = paginationPageActiveClassName;
 			}
-			return (<div onClick={() => handlePageClick(pageNo)} className={className} key={pageNo}>{pageNo}</div>);
+			return (<div data-testid={`page-${pageNo}`} onClick={() => handlePageClick(pageNo)} className={className} key={pageNo}>{pageNo}</div>);
 		})}
 		{extended && (
 			<>
 				<div className='pagination-ellipsis'>{'...'}</div>
-				<div className={totalPages === currentPageNo ? paginationPageActiveClassName: paginationPageClassName} onClick={handleLastPageClick} key={totalPages}>{totalPages}</div>
+				<div data-testid={`page-${totalPages}`} className={totalPages === currentPageNo ? paginationPageActiveClassName: paginationPageClassName} onClick={handleLastPageClick} key={totalPages}>{totalPages}</div>
 			</>
 		)}
-		<div onClick={handleNextSection} className={nextSectionClassName}>{'>'}</div>
+		<div data-testid='next-pages' onClick={handleNextSection} className={nextSectionClassName}>{'>'}</div>
 	</div>
 	);
 };
